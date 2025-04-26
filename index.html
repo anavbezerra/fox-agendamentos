@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fox Academia - Agendamentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Título Fox Academia sem fundo -->
+    <h1>
+      <span>fox academia</span>
+      <span class="agendamentos-titulo"> - Agendamentos</span>
+    </h1>
+
+    <!-- Observação fixa -->
+    <div class="observacao">
+      ⚠️ Agendamentos disponíveis: Segunda a Sexta das 06:00 às 21:30 | Sábado das 09:00 às 11:00. Agendamentos fora desses horários não são permitidos.
+    </div>
+
+    <!-- Formulário -->
+    <form id="form-agendamento">
+      <label for="nome">Nome/Descrição</label>
+      <input type="text" id="nome" required>
+
+      <label for="data">Data</label>
+      <input type="date" id="data" required>
+
+      <label for="inicio">Hora de Início</label>
+      <input type="time" id="inicio" required>
+
+      <label for="fim">Hora de Fim</label>
+      <input type="time" id="fim" required>
+
+      <label for="status">Status</label>
+      <select id="status" required>
+        <option value="Pago">Pago</option>
+        <option value="A pagar">A pagar</option>
+      </select>
+
+      <label for="valor">Valor</label>
+      <input type="text" id="valor" readonly>
+
+      <button type="submit">Agendar</button>
+    </form>
+
+    <!-- Horários ocupados -->
+    <div id="horarios-ocupados" class="horarios-ocupados"></div>
+
+    <!-- Lista de agendamentos -->
+    <ul id="lista-agendamentos"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
